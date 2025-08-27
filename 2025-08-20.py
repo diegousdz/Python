@@ -1,13 +1,31 @@
-#Main
-#In python the comments are written with the symbol #
-print("hola curso de intro a la programacion")
-#Hagamos un print que diga del nombre de nosotros ejemplo.. "hola diego"
-#print("hola Diego Aguirre")
-#numeroDeRuedas = 10 
-nombreDelDueno = input("Ingrese un nombre: ")
-#print("hola capo! " + nombreDelDueno)
-print(f"el nombre ingresado es {nombreDelDueno}")
-edad=int(input("Ingrese la edad que posee: "))
-print(f"{nombreDelDueno} tu edad ingresada es: {edad}")
-#Solicitar 2 numeros o sea perimero 1 y despues otro. 
-# sumar +, restar -, multiplicar * y dividir /.
+#Day Logger
+print("Hello! Good morning! Please enter your name")
+
+name = str(input("Enter your name: "))
+
+print(f"Hi {name}")
+
+age = int(input("What is your age?: "))
+
+print(f"nice to meet you {name} your name is: {age}")
+
+if(age >  25):
+    print("your age is {age}")
+    print("good good, do you have kids?")
+    nHijos = int(input("ingresa la cantidad de hijos: "))
+    print(f"tienes {nHijos} hijos que bien, me alegro")
+    statusCasado = str(input("Estas casado o soltero?, Ingresa casado o soltero "))
+
+    if(statusCasado == "casado"):
+        print(f"que bueno que estes casado!")
+        esFeliz = str(input("Eres Feliz?, ingrese si o No "))
+        if(esFeliz == "si"):
+            print(f"que bueno!")
+        else:
+            print(f"Uhh lo siento, aca tienes un numero deprevencion al suicidio 0800-No-Te-Cuelgues")
+    else:
+        print(f"que bueno bro!")
+else:
+    mascotas = int(input("Ingrese numero de mascotas "))
+    print(f"tienes {mascotas} mascota? Mira  vos! ")
+
