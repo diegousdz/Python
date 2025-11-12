@@ -33,11 +33,16 @@ def ordenar(producto, precio):
     for i in range(len(producto)-1):
         for j in range(i+1, len(producto)):
             if (producto [i]> producto[j]):
-                intercambiar
+                intercambiar(producto,i,j) #video bailarines alemanes?
+
+                intercambiar(precio,i,j)
 
 def intercambiar(vec, i, j):
     aux=vec[i]
-    vec[i]
+
+    vec[i]=vec[j]
+
+    vec[j]=aux
 
 def insertar(producto, precio):
     #recorrer el vector
@@ -55,7 +60,7 @@ def eliminar(producto, precio, prom):
             producto.pop(i)
             precio.pop(i)
         
-def promedioGenerat(precio):
+def promedioGeneral(precio):
     acum = 0
     cont = 0
 
@@ -109,6 +114,22 @@ print(f"Length vector nombre de prodcutos: {len(vectorNombreDeProductos)}")
 if(len(vectorNombreDeProductos) > 0):
     mostrarProductos(vectorNombreDeProductos, vectorPrecio)
     posicion_Min = productoPrecioMinimo(vectorPrecio)
+    print(f"El precio más bajo {vectorPrecio[posicion_Min]} y el producto que tiene ese precio bajo es {producto[posicion_minimo]}")
+    prom=promedioGeneral(vectorPrecio)
+    print(f"El promedio general de todos los precios es : {prom}")
+    eliminar(vectorNombreDeProductos,vectorPrecio,prom)
+    print("Despues de eliminar queda: ")
+    mostrarProductos(vectorNombreDeProductos,vectorPrecio)
+    insertar(vectorNombreDeProductos,vectorPrecio)
+    print("Despues de insertar queda: ")
+
+    mostrarProductos(vectorNombreDeProductos,vectorPrecio)
+
+    ordenar(vectorNombreDeProductos,vectorPrecio)
+
+    print("Despues de ordenar queda: ")
+
+    mostrarProductos(vectorNombreDeProductos,vectorPrecio)
     
 else:
     print("Error no hay elementos cargados en el systema")
